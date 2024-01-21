@@ -7,7 +7,7 @@ class JSONEditorWidget {
     initEditor(element) {
         // Initialize the JSONEditor widget
         const textarea = element.querySelector('textarea');
-        const options = {"modes": ["text", "code", "tree", "form", "view"], "mode": "code", "search": true};
+        const options = {"modes": ["text", "code", "tree", "form", "view"], "mode": "tree", "search": false};
 
         options.onChange = function () {
             var json = editor.get();
