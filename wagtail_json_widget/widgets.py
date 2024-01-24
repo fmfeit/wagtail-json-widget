@@ -42,12 +42,12 @@ class JSONEditorWidget(forms.Widget):
 
     class Media:
         js = (
-            getattr(settings, "JSON_EDITOR_JS", 'dist/jsoneditor.9.7.4.min.js'),
+            getattr(settings, "JSON_EDITOR_JS", 'dist/jsoneditor.10.0.0.min.js'),
             'wagtail_json_widget/js/json_widget.js'
         )
         css = {
             'all': (
-                getattr(settings, "JSON_EDITOR_CSS", 'dist/jsoneditor.9.7.4.min.css'),
+                getattr(settings, "JSON_EDITOR_CSS", 'dist/jsoneditor.10.0.0.min.css'),
                 'wagtail_json_widget/css/json_widget.css'
             )
         }
