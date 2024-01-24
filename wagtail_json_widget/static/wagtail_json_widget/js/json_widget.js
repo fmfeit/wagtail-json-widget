@@ -12,12 +12,17 @@ class JSONEditorWidget {
       search: false,
     };
 
-    options.onChange = function () {
-      var json = editor.get();
-      textarea.value = JSON.stringify(json);
+    options.onChangeText = function (jsonString) {
+      textarea.value = jsonString;
     };
     const editor = new JSONEditor(element, options);
-    editor.set(JSON.parse(textarea.value));
+
+    var json = {};
+    try {
+      json = JSON.parse(textarea.value);
+    } catch (e) {}
+
+    editor.set(json);
   }
 }
 
